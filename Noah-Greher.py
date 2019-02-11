@@ -12,6 +12,7 @@ def main():
         pangram("The quick brown Fox jumps over the lazy dog")
         sort([2,4,5,1,3,1])
 	evenAndOdd()
+	rotate(1,'abcd')
 def reverse(str):
         reverse_string=''
         for letter in str:
@@ -93,6 +94,28 @@ def pangram(sentence):
                 if set(string.ascii_lowercase)==(set(char_bank(sentence))):
                         print("this is a pangram")
                 print(bool(set(string.ascii_lowercase)==(set(char_bank(sentence)))))
+def rotate(shifted_input,word):
+	keys=list(string.ascii_lowercase)
+	values=list(range(len((list(string.ascii_lowercase)))))
+	dictionary=dict(zip(keys,values))
+	new_values=[]
+	for i in values:
+			new_values.append(((i-(int(shifted_input)))%26))     
+	#i subtract since we are moving the index instead of the letters.
+	new_dictionary=dict(zip(new_values,keys))
+	#since we can not look up dictionaries by values
+	#WE ASSIGN a numeric value to the the inputted text
+	#we then take that number and use search through the keys in new_dictionary
+	#to convert them back to letters but now encrypted letters.
+	def numberize():
+			for letter in word:
+					yield (dictionary[letter])
+	def encrypt():
+			for number in numberize():
+					yield new_dictionary[number]
+			
+
+	print(''.join((list(encrypt()))))  
 def evenAndOdd():
 	n=0
 	while n<11:
