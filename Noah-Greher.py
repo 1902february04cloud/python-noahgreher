@@ -92,6 +92,15 @@ def pangram(sentence):
                 if set(string.ascii_lowercase)==(set(char_bank(sentence))):
                         print("this is a pangram")
                 print(bool(set(string.ascii_lowercase)==(set(char_bank(sentence)))))
+def evenAndOdds():
+	n=0
+	while n<11:
+                n+=1
+                x=(input(("enter a number: ")))
+                x=int(x)
+                if x%2==0:even.write(str(x))
+                if x%2==1:odd.write(str(x))
+
 
 
 if __name__ == '__main__':
