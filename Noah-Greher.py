@@ -11,6 +11,7 @@ def main():
         primeFactors(15001)
         pangram("The quick brown Fox jumps over the lazy dog")
         sort([2,4,5,1,3,1])
+	evenAndOdd()
 def reverse(str):
         reverse_string=''
         for letter in str:
@@ -92,7 +93,7 @@ def pangram(sentence):
                 if set(string.ascii_lowercase)==(set(char_bank(sentence))):
                         print("this is a pangram")
                 print(bool(set(string.ascii_lowercase)==(set(char_bank(sentence)))))
-def evenAndOdds():
+def evenAndOdd():
 	n=0
 	while n<11:
                 n+=1
