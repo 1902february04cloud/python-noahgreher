@@ -10,7 +10,6 @@ def main():
         armstrong(153)
         primeFactors(15001)
         pangram("The quick brown Fox jumps over the lazy dog")
-        sort([2,4,5,1,3,1])
 	evenAndOdd()
 	rotate(1,'abcd')
 def reverse(str):
